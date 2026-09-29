@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    image: skinproj:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      # Model weights (~350 MB) + images stay on the host, mounted read-only.
+      - ./data:/app/data:ro
+    environment:
+      MODEL_PATH: /app/data/convnext_clinical_best.pth
+      IMG_SIZE: "384"
+      MEL_THRESHOLD: "0.30"
+    command: ["uvicorn", "src.api:app", "--host", "0.0.0.0", "--port", "8000"]

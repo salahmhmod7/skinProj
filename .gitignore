@@ -1,0 +1,18 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Large datasets and models
+data/HAM10000_images_part_1/
+data/HAM10000_images_part_2/
+*.pth
+archive.zip
+
+# Jupyter Notebook checkpoints
+Untitled-1.ipynb

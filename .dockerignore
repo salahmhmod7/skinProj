@@ -1,0 +1,13 @@
+# Keep the build context small — the repo contains GBs of data.
+.git/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+archive.zip
+data/
+*.pth
+*.jpg
+*.jpeg
+*.png
+.venv/
+venv/
